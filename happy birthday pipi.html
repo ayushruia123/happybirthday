@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday Day</title>
+    
+    <!-- Favicon images -->
+    <link rel="icon" href="favicon16x16.png" sizes="16x16" type="image/png">
+    <link rel="icon" href="favicon32x32.png" sizes="32x32" type="image/png">
+    
+    <!-- CSS styles -->
+    <style>
+        body {
+            background: linear-gradient(45deg, #FF0000, #FF6600, #FFCC00, #33CC33, #3399FF, #9933CC, #FF3399, #FF0000); /* Rainbow gradient background */
+            font-family: 'Arial', sans-serif;
+            color: #FFFFFF;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Text shadow */
+        }
+        
+        #container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        #card {
+            width: 400px;
+            height: 300px;
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 20px;
+            text-align: center;
+            border-radius: 10px;
+            animation: inhaleExhale 3s infinite alternate, rainbowColors 10s infinite;
+            cursor: pointer; /* Add pointer cursor to indicate clickability */
+        }
+        
+        h1 {
+            font-family: 'Times New Roman', serif;
+            font-size: 36px;
+            margin: 0;
+            padding-bottom: 10px;
+        }
+        
+        p {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        hr {
+            border-color: #FFD700; /* Color of the lines */
+        }
+
+        @keyframes inhaleExhale {
+            0% {
+                transform: scale(1);
+            }
+            100% {
+                transform: scale(1.05);
+            }
+        }
+
+        @keyframes rainbowColors {
+            0% {
+                background-color: #FF0000;
+            }
+            14% {
+                background-color: #FF6600;
+            }
+            29% {
+                background-color: #FFCC00;
+            }
+            43% {
+                background-color: #33CC33;
+            }
+            57% {
+                background-color: #3399FF;
+            }
+            71% {
+                background-color: #9933CC;
+            }
+            86% {
+                background-color: #FF3399;
+            }
+            100% {
+                background-color: #FF0000;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div id="card" onclick="rotateSquare()">
+            <h1>Happy Birthday Pipi</h1>
+            <p>Dear Dad,</p>
+            <hr> <!-- Enhanced lines -->
+            <p>Thank you for always being there for me. Your love and support mean the world to me. Wishing you a day filled with joy and happiness!"</p>
+        </div>
+    </div>
+
+    <!-- JavaScript for rotation animation -->
+    <script>
+        function rotateSquare() {
+            const card = document.getElementById('card');
+            card.style.animation = 'rotation 2s linear';
+            card.style.transformOrigin = 'center';
+            card.style.animationFillMode = 'forwards';
+        }
+    </script>
+</body>
+</html>
